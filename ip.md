@@ -1,5 +1,8 @@
 # Improvement proposal
 
 [ ] Start small - please
-    [ ] git support
+    [x] git support
     [ ] markdown support
+[ ] Of course not
+    [x] Inititated treesitter
+    [ ] spell checker
