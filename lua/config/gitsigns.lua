@@ -1,3 +1,3 @@
 require('gitsigns').setup {
-    signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+    numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
 }
