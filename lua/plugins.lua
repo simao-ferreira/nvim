@@ -36,6 +36,7 @@ return packer.startup(function(use)
 
     use 'wbthomason/packer.nvim' -- Have packer manage itself
     use {'ellisonleao/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
+    use "rebelot/kanagawa.nvim"
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'},
         config = [[require('config.gitsigns')]]}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
