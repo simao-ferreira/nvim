@@ -67,8 +67,8 @@ cmp.setup {
     fields = { 'abbr', 'menu' },
     format = function(entry, vim_item)
       vim_item.menu = ({
-                lsp = '[lsp]',
-                lua = '[lua]',
+                nvim_lsp = '[lsp]',
+                nvim_lua = '[lua]',
                 luasnip = '[snippet]',
                 buffer = '[buffer]',
                 path = '[path]',
@@ -77,19 +77,19 @@ cmp.setup {
     end,
   },
   sources = {
-        { name = 'lsp'},
-        { name = 'lua'},
-    { name = 'luasnip' },
-    { name = 'buffer' },
-    { name = 'path' },
+        { name = 'nvim_lsp'},
+        { name = 'nvim_lua'},
+        { name = 'luasnip' },
+        { name = 'buffer' },
+        { name = 'path' },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-  },
+--  documentation = {
+--    border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+--  },
   experimental = {
     ghost_text = false,
     native_menu = false,
