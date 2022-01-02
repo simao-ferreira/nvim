@@ -4,4 +4,4 @@ require 'bootstrap'
 require 'colorscheme'
 
 require 'plugins'
---require 'lsp'
+require 'lsp'

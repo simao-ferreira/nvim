@@ -40,33 +40,35 @@ packer.init {
 
 -- Plugins go here
 return packer.startup(function(use)
-    -- Implemets cache for all loaded lua modules, allowing for preload, 
+    -- Implemets cache for all loaded lua modules, allowing for preload,
     -- enabling configuration of lua modules to be found when plugins are loaded
     -- Might be included in neovim sometime soon(ish)
-    use "lewis6991/impatient.nvim"
+    use 'lewis6991/impatient.nvim'
 
     use 'wbthomason/packer.nvim' -- Have packer manage itself
     use {'ellisonleao/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
 
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
+
+    -- treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    
+    use 'p00f/nvim-ts-rainbow'
+
     -- Completion engine
     use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-buffer'    
-    use 'hrsh7th/cmp-path'   
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp'
 
-    --Snippets
+    -- Snippets
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
-    
---    use {
---        {'neovim/nvim-lspconfig', config = [[require('lsp')]]},
---        'williamboman/nvim-lsp-installer',
---    }
+
+    -- lsp
+    use {'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer'}
 
     if PACKER_BOOTSTRAP then
     require('packer').sync()
