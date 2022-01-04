@@ -21,7 +21,7 @@ end
 vim.cmd [[
     augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost bootstrap.lua source <afile> | PackerSync
     augroup end
 ]]
 
@@ -47,8 +47,9 @@ return packer.startup(function(use)
 
     use 'wbthomason/packer.nvim' -- Have packer manage itself
     use {'ellisonleao/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
-
+    use 'windwp/nvim-autopairs'
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
+    use "numToStr/Comment.nvim"
 
     -- treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
