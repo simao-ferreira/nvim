@@ -1,8 +1,8 @@
 local fn = vim.fn
 
--- Bootstrap packer installation 
+-- Bootstrap packer installation
 local install_suffix = '/site/pack/packer/start/packer.nvim'
-local install_path = fn.stdpath 'data' .. install_suffix 
+local install_path = fn.stdpath 'data' .. install_suffix
 
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system {
@@ -49,7 +49,12 @@ return packer.startup(function(use)
     use {'ellisonleao/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
     use 'windwp/nvim-autopairs'
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
-    use "numToStr/Comment.nvim"
+    use 'numToStr/Comment.nvim'
+
+    -- Extras: nvim-tree, bufferline
+    use 'kyazdani42/nvim-web-devicons'
+    use 'kyazdani42/nvim-tree.lua'
+    use "akinsho/bufferline.nvim"
 
     -- treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

@@ -11,24 +11,17 @@ comment.setup({
     -- NORMAL mode line-wise mappings
     toggler = {
         line = 'gcc',
-        block = 'gbc',
+        block = 'gbb',
     },
 
     -- NORMAL+VISUAL mode operator mappings
     opleader = {
-        line = 'gl',
-        block = 'gc',
-    },
-
-    extra = {
-        above = 'gcO',    -- Add comment on the line above
-        below = 'gco',    -- Add comment on the line below
-        eol = 'gcA',      -- Add comment at the end of line
+        line = 'gc',
+        block = 'gb',
     },
 
     mappings = {
-        basic = true,     -- Includes `gcc`, `gbc`, `gc[count]{motion}` and `gb[count]{motion}`
-        extra = true,     -- Includes `gco`, `gcO`, `gcA`
+        basic = true,     -- Includes `gcc`, `gbb`, `gc[count]{motion}` and `gb[count]{motion}`
         extended = false, -- Includes `g>`, `g<`, `g>[count]{motion}` and `g<[count]{motion}`
     },
 })

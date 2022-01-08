@@ -5,3 +5,4 @@ require 'colorscheme'
 
 require 'plugins'
 require 'lsp'
+
