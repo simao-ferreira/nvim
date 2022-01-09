@@ -51,10 +51,11 @@ return packer.startup(function(use)
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use 'numToStr/Comment.nvim'
 
-    -- Extras: nvim-tree, bufferline
+    -- Extras: nvim-tree, bufferline, lualine
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
-    use "akinsho/bufferline.nvim"
+    use 'akinsho/bufferline.nvim'
+    use 'nvim-lualine/lualine.nvim'
 
     -- treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
