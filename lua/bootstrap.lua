@@ -77,6 +77,10 @@ return packer.startup(function(use)
     use {'neovim/nvim-lspconfig',
         'williamboman/nvim-lsp-installer'}
 
+    -- markdown
+    -- requires glow to be installed
+    use {'ellisonleao/glow.nvim'}
+
     if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
