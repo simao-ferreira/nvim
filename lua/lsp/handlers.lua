@@ -94,14 +94,4 @@ end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
-function M.enable_format_on_save()
-  vim.cmd [[
-    augroup format_on_save
-      autocmd!
-      autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()
-    augroup end
-  ]]
-  vim.notify "Enabled format on save"
-end
-
 return M
