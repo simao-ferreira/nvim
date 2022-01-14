@@ -18,7 +18,7 @@ end
 cmp.setup {
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      luasnip.lsp_expand(args.body) -- For `luasnip`
     end,
   },
   mapping = {
@@ -26,7 +26,7 @@ cmp.setup {
 	['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    -- ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ['<C-e>'] = cmp.mapping {
       i = cmp.mapping.abort(),
@@ -70,7 +70,7 @@ cmp.setup {
       vim_item.menu = ({
                 nvim_lsp = '[lsp]',
                 nvim_lua = '[lua]',
-                luasnip = '[snippet]',
+                luasnip = '[snip]',
                 buffer = '[buffer]',
                 path = '[path]',
       })[entry.source.name]
@@ -81,7 +81,7 @@ cmp.setup {
         { name = 'nvim_lsp'},
         { name = 'nvim_lua'},
         { name = 'luasnip' },
-        { name = 'buffer' },
+        { name = 'buffer', keyword_length = 3 },
         { name = 'path' },
   },
   confirm_opts = {
