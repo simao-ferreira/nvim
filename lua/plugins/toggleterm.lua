@@ -16,7 +16,7 @@ toggleterm.setup({
 
 function _G.set_terminal_keymaps()
   local opts = {noremap = true}
-  vim.api.nvim_buf_set_keymap(0, 't', '<ESC>', '<cmd>close<cr>', opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-Q>', '<cmd>close<cr>', opts)
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')

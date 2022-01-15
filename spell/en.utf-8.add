@@ -9,3 +9,7 @@ OSX
 keymaps
 colorscheme
 lsp
+json
+kotlin
+yaml
+dockerfile
