@@ -81,6 +81,9 @@ return packer.startup(function(use)
     -- requires glow to be installed
     use {'ellisonleao/glow.nvim'}
 
+    -- Better terminal usage
+    use 'akinsho/toggleterm.nvim'
+
     if PACKER_BOOTSTRAP then
     require('packer').sync()
   end

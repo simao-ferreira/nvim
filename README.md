@@ -17,3 +17,7 @@ This configuration is heavily inspired by
 - https://github.com/ibhagwan/nvim-lua
 - https://github.com/wbthomason/dotfiles/tree/linux/neovim/.config/nvim
 
+A good video resource for understanding usage
+
+- https://odysee.com/@chrisatmachine
+

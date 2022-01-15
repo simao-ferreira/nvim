@@ -6,4 +6,5 @@ require 'plugins.autopair'
 require 'plugins.nvim-tree'
 require 'plugins.bufferline'
 require 'plugins.lualine'
+require 'plugins.toggleterm'
 
