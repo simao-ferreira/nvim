@@ -40,9 +40,9 @@ packer.init {
 
 -- Plugins go here
 return packer.startup(function(use)
-    -- Implemets cache for all loaded lua modules, allowing for preload,
+    -- Implements cache for all loaded lua modules, allowing for preload,
     -- enabling configuration of lua modules to be found when plugins are loaded
-    -- Might be included in neovim sometime soon(ish)
+    -- Might be included in neovim sometime soon
     use 'lewis6991/impatient.nvim'
 
     use 'wbthomason/packer.nvim' -- Have packer manage itself
@@ -61,13 +61,14 @@ return packer.startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'p00f/nvim-ts-rainbow'
 
-    -- Completion engine
+    -- Completion, formatter, linter
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'
