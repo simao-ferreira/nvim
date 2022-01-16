@@ -13,7 +13,6 @@ local servers = {
   "pyright",
   "yamlls",
   "sumneko_lua",
-  "zk",
 }
 
 for _, name in pairs(servers) do
