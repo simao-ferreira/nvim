@@ -7,15 +7,19 @@ end
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/lua/null-ls/builtins/completion
+local completion = null_ls.builtins.completion
 
--- https://github.com/prettier-solidity/prettier-plugin-solidity
--- npm install --save-dev prettier prettier-plugin-solidity
 null_ls.setup {
-  debug = true,
-  sources = {
-    formatting.prettier.with {
-      extra_filetypes = { "toml" },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+    debug = true,
+    sources = {
+        formatting.prettier.with({
+            extra_args = {
+                '--use-tabs',
+                '--single-quote',
+                '--prose-wrap always',
+            }
+        }),
+        completion.spell,
     },
-  },
 }

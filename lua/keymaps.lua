@@ -52,4 +52,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
 -- Formatting
-keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
+keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting_sync(nil, 6000)<CR>', opts)
