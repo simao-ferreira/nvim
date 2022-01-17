@@ -33,9 +33,10 @@ o.smartindent = true		-- indent a new line - extra stuff
 o.fileencoding = 'utf-8'
 
 -- Spell
--- to fix error: Cannot find word list do
--- set: spelllang=de
--- set: spelllang=pt_pt
+-- to fix error: Cannot find word list
+-- run `nvim -u NORC`
+-- :set spelllang=de
+-- :set spelllang=pt_pt
 -- It will prompt for the download of the lang files
 o.spell = true                                  -- always spellcheck
 o.spelllang = { 'en', 'pt_pt', 'de_de'}         -- set languages for spellcheck
