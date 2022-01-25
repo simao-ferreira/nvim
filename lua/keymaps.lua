@@ -53,3 +53,6 @@ keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
 -- Formatting
 keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting_sync(nil, 6000)<CR>', opts)
+
+-- Indent
+keymap('n', '<leader>i', 'gg=G', opts)
